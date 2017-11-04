@@ -1,0 +1,18 @@
+OSTYPE		=linux
+
+OBJROOT		=/Users/roedig/Desktop/fispi/
+SRCROOT		=..
+INSTROOT        =/Users/roedig/Desktop/fispi/run/
+
+CC		=gcc
+RM		=rm
+CP		=cp
+LN		=ln
+FIND		=find
+MKDIR		=mkdir
+MAKEDEPEND	=gcc -MM
+
+DEBUG		=-g
+#DEBUG		+=-pg
+CFLAGS		=-I$(OBJROOT) -I$(SRCDIR) -Wno-unused -D$(OSTYPE) 
+LDFLAGS		=

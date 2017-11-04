@@ -1,0 +1,13 @@
+%.o: %.cxx
+	$(CC) $(DEBUG) $(CFLAGS) -c $< -o $@
+
+%.o: %.c
+	$(CC) $(DEBUG) $(CFLAGS) -c $< -o $@
+
+localclean:
+	$(RM) -f *.o
+	$(RM) -f *.a
+	$(RM) -f *.so
+
+localdepend:
+	$(MAKEDEPEND) $(CFLAGS) $(SRC) > MakeDep
